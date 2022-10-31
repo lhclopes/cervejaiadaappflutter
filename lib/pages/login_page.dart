@@ -1,4 +1,5 @@
 import 'package:cervejaiadaappflutter/pages/main_page.dart';
+import 'package:cervejaiadaappflutter/shared/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,9 +54,9 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.network(
-                        "https://hermes.digitalinnovation.one/assets/diome/logo.png",
-                        height: 100,
+                      Image.asset(
+                        AppImages.logo,
+                        height: 300,
                       ),
                       Container(
                         margin: const EdgeInsets.symmetric(

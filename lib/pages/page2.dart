@@ -1,3 +1,4 @@
+import 'package:cervejaiadaappflutter/shared/app_images.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {
@@ -11,7 +12,8 @@ class _Page1State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.amberAccent
+      color: Colors.amberAccent, 
+      child: Image.asset(AppImages.logo, height: 10,)
     );
   }
 }

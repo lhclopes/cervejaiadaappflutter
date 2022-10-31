@@ -24,10 +24,6 @@ class _SideMenuItemState extends State<SideMenuItem> {
             Icon(widget.icon, color: Colors.white, size: 30),
             const SizedBox(width: 15),
             Text(widget.text,
-                // style: const TextStyle(
-                //   fontSize: 22,
-                //   fontWeight: FontWeight.bold,
-                // ), aBeeZee abel
                 style: GoogleFonts.montserrat(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,

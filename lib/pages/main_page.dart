@@ -1,10 +1,9 @@
 
-import 'package:cervejaiadaappflutter/components/side_menu.dart';
-import 'package:cervejaiadaappflutter/components/side_menu_item.dart';
-import 'package:cervejaiadaappflutter/pages/new_user.dart';
+import 'package:cervejaiadaappflutter/pages/cards/card_page.dart';
 import 'package:cervejaiadaappflutter/pages/page1.dart';
 import 'package:cervejaiadaappflutter/pages/page2.dart';
 import 'package:cervejaiadaappflutter/pages/page3.dart';
+import 'package:cervejaiadaappflutter/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,17 +52,7 @@ class _MainPageState extends State<MainPage> {
               ),
             ],
           ),
-          drawer: const Drawer(
-            width: 250,
-            child: SideMenu(
-              imageURL: "https://hermes.digitalinnovation.one/assets/diome/logo.png",
-              sideMenuItens: [
-                SideMenuItem(icon: Icons.home, text: 'Menu Item 1', callback: NewUser(title: 'New User 1')),
-                SideMenuItem(icon: Icons.person, text: 'Menu Item 2', callback: NewUser(title: 'New User 2')),
-                SideMenuItem(icon: Icons.list, text: 'Menu Item 3', callback: NewUser(title: 'New User 3')),
-              ]
-            )
-          ),
+          drawer: const CustomDrawer(),
           body: Column(
             children: [
               Expanded(
@@ -77,7 +66,7 @@ class _MainPageState extends State<MainPage> {
                   allowImplicitScrolling: true,
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    Page1(),
+                    CardPage(),
                     Page2(),
                     Page3(),
                   ],
