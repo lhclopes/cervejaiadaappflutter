@@ -10,7 +10,7 @@ class SideMenuItem extends StatefulWidget {
   final callback;
 
   @override
-  _SideMenuItemState createState() => _SideMenuItemState();
+  createState() => _SideMenuItemState();
 }
 
 class _SideMenuItemState extends State<SideMenuItem> {

@@ -1,11 +1,11 @@
 
 import 'package:cervejaiadaappflutter/pages/cards/card_page.dart';
-import 'package:cervejaiadaappflutter/pages/page1.dart';
+import 'package:cervejaiadaappflutter/pages/cep_find.dart';
 import 'package:cervejaiadaappflutter/pages/page2.dart';
 import 'package:cervejaiadaappflutter/pages/page3.dart';
+import 'package:cervejaiadaappflutter/pages/task/task_sqlite_page.dart';
 import 'package:cervejaiadaappflutter/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -67,12 +67,15 @@ class _MainPageState extends State<MainPage> {
                   scrollDirection: Axis.horizontal,
                   children: const [
                     CardPage(),
+                    CepFind(),
                     Page2(),
                     Page3(),
+                    TaskSQLitePage()
                   ],
                 ),
               ),
               BottomNavigationBar(
+                  type: BottomNavigationBarType.fixed,
                   backgroundColor: Colors.black,
                   selectedItemColor: Colors.amber,
                   unselectedItemColor: Colors.white,
@@ -84,9 +87,13 @@ class _MainPageState extends State<MainPage> {
                     BottomNavigationBarItem(
                         label: "Feed", icon: Icon(Icons.home)),
                     BottomNavigationBarItem(
-                        label: "Take Picture", icon: Icon(Icons.add_a_photo)),
+                        label: "Cep", icon: Icon(Icons.get_app)),
                     BottomNavigationBarItem(
-                        label: "Friends", icon: Icon(Icons.group)),
+                        label: "Page2", icon: Icon(Icons.add_a_photo)),
+                    BottomNavigationBarItem(
+                        label: "Page3", icon: Icon(Icons.add_a_photo)),
+                    BottomNavigationBarItem(
+                        label: "Task List", icon: Icon(Icons.list)),
                   ])
             ],
           )),

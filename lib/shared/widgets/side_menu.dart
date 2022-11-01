@@ -11,7 +11,7 @@ class SideMenu extends StatefulWidget {
   final List sideMenuItens;
 
   @override
-  _SideMenuState createState() => _SideMenuState();
+  createState() => _SideMenuState();
 }
 
 class _SideMenuState extends State<SideMenu> {

@@ -1,11 +1,11 @@
-import 'package:cervejaiadaappflutter/shared/app_images.dart';
+import 'package:cervejaiadaappflutter/app_images.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({ Key? key }) : super(key: key);
 
   @override
-  _Page1State createState() => _Page1State();
+  createState() => _Page1State();
 }
 
 class _Page1State extends State<Page2> {

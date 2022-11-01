@@ -1,4 +1,11 @@
-import 'package:cervejaiadaappflutter/pages/cards/card_page.dart';
+import 'package:cervejaiadaappflutter/app_images.dart';
+import 'package:cervejaiadaappflutter/pages/aleatory_numbers/aleatory_numbers_hive_page.dart';
+import 'package:cervejaiadaappflutter/pages/aleatory_numbers/aleatory_numbers_shared_preferences_page.dart';
+import 'package:cervejaiadaappflutter/pages/marvel/characters_page.dart';
+import 'package:cervejaiadaappflutter/pages/posts_page.dart';
+import 'package:cervejaiadaappflutter/pages/settings/settings_hive_page.dart';
+import 'package:cervejaiadaappflutter/pages/settings/settings_shared_preferences_page.dart';
+import 'package:cervejaiadaappflutter/pages/task/task_back4app_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,8 +28,10 @@ class CustomDrawer extends StatelessWidget {
                   const BoxDecoration(color: Color.fromARGB(255, 49, 49, 49)),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.white,
-                  child: Image.network(
-                      "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
+                  child: ClipRRect(
+                    borderRadius:BorderRadius.circular(50),
+                    child: Image.asset(AppImages.profile2),
+                  )
                 ),
                 accountName: const Text('nome'),
                 accountEmail: const Text('email@email.com')),
@@ -33,14 +42,14 @@ class CustomDrawer extends StatelessWidget {
                     return Wrap(
                       children: [
                         ListTile(
-                          leading: Icon(Icons.camera),
+                          leading: const Icon(Icons.camera),
                           title: const Text("Camera"),
                           onTap: () {
                             Navigator.pop(context);
                           },
                         ),
                         ListTile(
-                          leading: Icon(Icons.photo_album),
+                          leading: const Icon(Icons.photo_album),
                           title: const Text("Galeria"),
                           onTap: () {
                             Navigator.pop(context);
@@ -51,8 +60,10 @@ class CustomDrawer extends StatelessWidget {
                   });
             },
           ),
-          const Expanded(
-            child: SideMenu(
+          Expanded(
+            child: ListView(
+            children: const [
+              SideMenu(
                 imageURL:
                     "https://hermes.digitalinnovation.one/assets/diome/logo.png",
                 sideMenuItens: [
@@ -61,18 +72,39 @@ class CustomDrawer extends StatelessWidget {
                       text: 'Menu Item 1',
                       callback: NewUser(title: 'New User 1')),
                   SideMenuItem(
-                      icon: Icons.person,
-                      text: 'Menu Item 2',
-                      callback: NewUser(title: 'New User 2')),
+                      icon: Icons.settings,
+                      text: 'Settings',
+                      callback: SettingsSharedPreferencesPage()),
+                  SideMenuItem(
+                      icon: Icons.settings,
+                      text: 'Settings 2',
+                      callback: SettingsHivePage()),
+                  SideMenuItem(
+                      icon: Icons.numbers,
+                      text: 'Aleatory',
+                      callback: AleatoryNumbersSharedPreferencesPage()),
+                  SideMenuItem(
+                      icon: Icons.numbers,
+                      text: 'Aleatory2',
+                      callback: AleatoryNumbersHivePage()),
                   SideMenuItem(
                       icon: Icons.list,
-                      text: 'Menu Item 3',
-                      callback: NewUser(title: 'New User 3')),
+                      text: 'Posts',
+                      callback: PostsPage()),
+                  SideMenuItem(
+                      icon: Icons.zoom_in,
+                      text: 'Marvel',
+                      callback: CharactersPage()),
+                  SideMenuItem(
+                      icon: Icons.zoom_in,
+                      text: 'Task Back4App',
+                      callback: TaskBack4AppPage()),
                 ]),
+            ]),
           ),
           Container(
               height: 60,
-              color: Color.fromARGB(255, 49, 49, 49),
+              color: const Color.fromARGB(255, 49, 49, 49),
               child: Center(
                 child: Text(
                   "App Version 1.0",

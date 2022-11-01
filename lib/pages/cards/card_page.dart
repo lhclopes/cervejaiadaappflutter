@@ -31,7 +31,7 @@ class _CardPageState extends State<CardPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: cardDetailList == null ? Center(child: CircularProgressIndicator()) : 
+      child: cardDetailList == null ? const Center(child: CircularProgressIndicator()) : 
       ListView(
         children: [
           for (var cardDetail in cardDetailList!)

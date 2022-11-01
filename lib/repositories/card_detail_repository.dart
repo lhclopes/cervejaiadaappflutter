@@ -43,7 +43,7 @@ class CardDetailRepository {
   }
 
   Future<List<CardDetail>> getAll() async {
-    await Future.delayed(Duration(seconds: 10));
+    await Future.delayed(const Duration(seconds: 3));
 
     return cardDetailList;
   }

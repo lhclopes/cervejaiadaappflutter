@@ -1,5 +1,5 @@
 import 'package:cervejaiadaappflutter/pages/main_page.dart';
-import 'package:cervejaiadaappflutter/shared/app_images.dart';
+import 'package:cervejaiadaappflutter/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -64,10 +64,9 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text(
                           'Do you have you register?',
                           style: GoogleFonts.montserrat(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white
-                          ),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
                         ),
                       ),
                       Container(
@@ -137,28 +136,26 @@ class _LoginPageState extends State<LoginPage> {
                               child: Text(
                                 'Go',
                                 style: GoogleFonts.montserrat(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white
-                                ),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white),
                               ),
                             ),
                           )),
                     ],
                   )),
                   Container(
-                    height: 60,
-                    color: Color.fromARGB(255, 49, 49, 49),
-                    child: Center(
-                      child: Text("App Version 1.0",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white
+                      height: 60,
+                      color: const Color.fromARGB(255, 49, 49, 49),
+                      child: Center(
+                        child: Text(
+                          "App Version 1.0",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
                         ),
-                      ),
-                    )
-                  )
+                      ))
                 ]),
               ),
             )),

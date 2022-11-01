@@ -1,5 +1,5 @@
 import 'package:cervejaiadaappflutter/repositories/experience_level_repository.dart';
-import 'package:cervejaiadaappflutter/repositories/languages_repository%20copy.dart';
+import 'package:cervejaiadaappflutter/repositories/languages_repository.dart';
 import 'package:flutter/material.dart';
 
 class NewUser extends StatefulWidget {
@@ -23,7 +23,7 @@ class _NewUserState extends State<NewUser> {
 
   var experienceLevelList = [];
   var languageList = [];
-  var selectedExperienceLevel;
+  var selectedExperienceLevel = '';
   var selectedLanguages = [];
   var selectedSalary = 0.0;
   var experienceTime = 0;
@@ -72,7 +72,7 @@ class _NewUserState extends State<NewUser> {
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: saving
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : ListView(
                 children: [
                   TextFormField(
@@ -174,13 +174,13 @@ class _NewUserState extends State<NewUser> {
                       }),
                   TextButton(
                     onPressed: () {
-                      print(userController.text);
-                      print(emailController.text);
-                      print(birthdayController.text);
-                      print(selectedExperienceLevel);
-                      print(selectedLanguages);
-                      print(experienceTime);
-                      print(selectedSalary);
+                      debugPrint(userController.text);
+                      debugPrint(emailController.text);
+                      debugPrint(birthdayController.text);
+                      debugPrint(selectedExperienceLevel);
+                      debugPrint(selectedLanguages.toString());
+                      debugPrint(experienceTime.toString());
+                      debugPrint(selectedSalary.toString());
 
                       setState(() {
                         saving = true;
@@ -195,7 +195,7 @@ class _NewUserState extends State<NewUser> {
                         Navigator.pop(context);
                       });
                     },
-                    child: Text('Save'),
+                    child: const Text('Save'),
                   ),
                 ],
               ),
