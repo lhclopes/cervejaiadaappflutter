@@ -1,6 +1,7 @@
-import 'package:cervejaiadaappflutter/pages/Login_page.dart';
+import 'package:cervejaiadaappflutter/pages/splash_screen/splash_screen_delay_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CervejaiadaApp extends StatelessWidget {
   const CervejaiadaApp({super.key});
@@ -8,8 +9,8 @@ class CervejaiadaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cervejaiada',
-      home: const LoginPage(),
+      title: 'APP_TITLE'.tr(),
+      home: const SplashScreenDelayPage(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.amber,
@@ -19,6 +20,9 @@ class CervejaiadaApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }

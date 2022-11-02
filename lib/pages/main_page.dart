@@ -1,11 +1,12 @@
-
 import 'package:cervejaiadaappflutter/pages/cards/card_page.dart';
 import 'package:cervejaiadaappflutter/pages/cep_find.dart';
-import 'package:cervejaiadaappflutter/pages/page2.dart';
 import 'package:cervejaiadaappflutter/pages/page3.dart';
+import 'package:cervejaiadaappflutter/pages/percent_indicator/percent_indicator_page.dart';
 import 'package:cervejaiadaappflutter/pages/task/task_sqlite_page.dart';
 import 'package:cervejaiadaappflutter/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -24,8 +25,8 @@ class _MainPageState extends State<MainPage> {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black,
-            title: const Text(
-              'Home',
+            title: Text(
+              tr('APP_HOME'),
               style: TextStyle(fontSize: 20, fontFamily: 'Raleway'),
             ),
             actions: <Widget>[
@@ -39,12 +40,22 @@ class _MainPageState extends State<MainPage> {
                         appBar: AppBar(
                           title: const Text('Next page'),
                         ),
-                        body: const Center(
-                          child: Text(
+                        body: Column(children: [
+                          Text(
                             'This is the next page',
                             style: TextStyle(fontSize: 24),
                           ),
-                        ),
+                          TextButton(
+                              onPressed: () {
+                                print(context.locale.toString());
+                                if (context.locale.toString() == "pt_BR") {
+                                  context.setLocale(Locale('en', 'US'));
+                                } else {
+                                  context.setLocale(Locale('pt', 'BR'));
+                                }
+                              },
+                              child: Text('Change Language'))
+                        ]),
                       );
                     },
                   ));
@@ -68,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                   children: const [
                     CardPage(),
                     CepFind(),
-                    Page2(),
+                    PercentIndicatorPage(),
                     Page3(),
                     TaskSQLitePage()
                   ],
@@ -85,15 +96,26 @@ class _MainPageState extends State<MainPage> {
                   currentIndex: pagePosition,
                   items: const [
                     BottomNavigationBarItem(
-                        label: "Feed", icon: Icon(Icons.home)),
+                        label: "Feed",
+                        icon: FaIcon(FontAwesomeIcons.addressCard)),
                     BottomNavigationBarItem(
                         label: "Cep", icon: Icon(Icons.get_app)),
                     BottomNavigationBarItem(
-                        label: "Page2", icon: Icon(Icons.add_a_photo)),
+                        label: "Page2",
+                        icon: FaIcon(
+                          FontAwesomeIcons.percent,
+                          color: Colors.red,
+                          size: 25,
+                        )),
                     BottomNavigationBarItem(
                         label: "Page3", icon: Icon(Icons.add_a_photo)),
                     BottomNavigationBarItem(
-                        label: "Task List", icon: Icon(Icons.list)),
+                        label: "Task List",
+                        icon: FaIcon(
+                          FontAwesomeIcons.listCheck,
+                          color: Colors.green,
+                          size: 25,
+                        )),
                   ])
             ],
           )),

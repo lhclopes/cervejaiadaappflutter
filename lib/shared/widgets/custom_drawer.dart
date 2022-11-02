@@ -1,8 +1,16 @@
 import 'package:cervejaiadaappflutter/app_images.dart';
 import 'package:cervejaiadaappflutter/pages/aleatory_numbers/aleatory_numbers_hive_page.dart';
 import 'package:cervejaiadaappflutter/pages/aleatory_numbers/aleatory_numbers_shared_preferences_page.dart';
+import 'package:cervejaiadaappflutter/pages/auto_size_text/auto_size_text_page.dart';
+import 'package:cervejaiadaappflutter/pages/battery/battery_page.dart';
+import 'package:cervejaiadaappflutter/pages/brasil_fields/brasil_fields_page.dart';
+import 'package:cervejaiadaappflutter/pages/camera/camera_page.dart';
+import 'package:cervejaiadaappflutter/pages/connectivity_plus/connectivity_plus_page.dart';
+import 'package:cervejaiadaappflutter/pages/geolocator/geolocator_page.dart';
 import 'package:cervejaiadaappflutter/pages/marvel/characters_page.dart';
+import 'package:cervejaiadaappflutter/pages/percent_indicator/percent_indicator_page.dart';
 import 'package:cervejaiadaappflutter/pages/posts_page.dart';
+import 'package:cervejaiadaappflutter/pages/qr_code/qr_code_page.dart';
 import 'package:cervejaiadaappflutter/pages/settings/settings_hive_page.dart';
 import 'package:cervejaiadaappflutter/pages/settings/settings_shared_preferences_page.dart';
 import 'package:cervejaiadaappflutter/pages/task/task_back4app_page.dart';
@@ -99,6 +107,38 @@ class CustomDrawer extends StatelessWidget {
                       icon: Icons.zoom_in,
                       text: 'Task Back4App',
                       callback: TaskBack4AppPage()),
+                  SideMenuItem(
+                      icon: Icons.percent,
+                      text: 'Percent',
+                      callback: PercentIndicatorPage()),
+                  SideMenuItem(
+                      icon: Icons.text_decrease,
+                      text: 'Auto Size Text',
+                      callback: AutoSizeTextPage()),
+                  SideMenuItem(
+                      icon: Icons.flag,
+                      text: 'Brasil Fields',
+                      callback: BrasilFieldsPage()),
+                  SideMenuItem(
+                      icon: Icons.battery_0_bar,
+                      text: 'Battery',
+                      callback: BatteryPage()),
+                  SideMenuItem(
+                      icon: Icons.connected_tv,
+                      text: 'Connectivity',
+                      callback: ConnectivityPlusPage()),
+                  SideMenuItem(
+                      icon: Icons.gps_fixed,
+                      text: 'Geolocator',
+                      callback: GeolocatorPage()),
+                  SideMenuItem(
+                      icon: Icons.qr_code,
+                      text: 'QRCode',
+                      callback: QrCodePage()),
+                  SideMenuItem(
+                      icon: Icons.camera,
+                      text: 'Camera',
+                      callback: CameraPage()),
                 ]),
             ]),
           ),

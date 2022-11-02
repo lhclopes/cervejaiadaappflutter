@@ -45,8 +45,23 @@ dependencies:
   dio: ^4.0.6
   flutter_dotenv: ^5.0.2
   convert: ^3.1.1
+  font_awesome_flutter: ^10.2.1
+  percent_indicator: ^4.2.2
+  auto_size_text: ^3.0.0
+  animated_text_kit: ^4.2.2
+  brasil_fields: ^1.6.0
+  intl: ^0.17.0
+  easy_localization: ^3.0.1
+  battery_plus: ^3.0.2
+  connectivity_plus: ^3.0.2
+  geolocator: ^9.0.2
+  qr_code_scanner: ^1.0.1
+  gallery_saver: ^2.3.2
+  image_cropper: ^3.0.1
+  image_picker: ^0.8.6
 
 dev_dependencies:
+  flutter_launcher_icons: '^0.10.0'
   flutter_test:
     sdk: flutter
 
@@ -73,6 +88,8 @@ flutter:
     - lib/images/logo.png
     - lib/images/profile.png
     - lib/images/profile2.png
+    - assets/translations/en-US.json
+    - assets/translations/pt-BR.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -99,3 +116,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_icons:
+  android: 'launcher_icon'
+  ios: true
+  image_path: 'assets/icon/logo.png'
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true

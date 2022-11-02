@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:cervejaiadaappflutter/model/comment_model.dart';
-import 'package:cervejaiadaappflutter/repositories/comments/comments_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/comments_repository.dart';
 import 'package:http/http.dart' as http;
 
 class CommentsHttpRepository implements CommentsRepository {

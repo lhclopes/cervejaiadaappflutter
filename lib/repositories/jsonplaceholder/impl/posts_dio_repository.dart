@@ -1,6 +1,6 @@
 import 'package:cervejaiadaappflutter/model/post_model.dart';
 import 'package:cervejaiadaappflutter/repositories/jsonplaceholder_custom_dio.dart';
-import 'package:cervejaiadaappflutter/repositories/posts/post_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/post_repository.dart';
 
 class PostsDioRepository implements PostsRepository {
   @override

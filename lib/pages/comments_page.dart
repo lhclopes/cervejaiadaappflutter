@@ -1,6 +1,6 @@
 import 'package:cervejaiadaappflutter/model/comment_model.dart';
-import 'package:cervejaiadaappflutter/repositories/comments/comments_repository.dart';
-import 'package:cervejaiadaappflutter/repositories/comments/impl/comments_dio_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/comments_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/impl/comments_dio_repository.dart';
 import 'package:flutter/material.dart';
 
 class CommentsPage extends StatefulWidget {

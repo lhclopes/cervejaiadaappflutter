@@ -1,7 +1,7 @@
 import 'package:cervejaiadaappflutter/model/post_model.dart';
 import 'package:cervejaiadaappflutter/pages/comments_page.dart';
-import 'package:cervejaiadaappflutter/repositories/posts/impl/posts_dio_repository.dart';
-import 'package:cervejaiadaappflutter/repositories/posts/post_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/impl/posts_dio_repository.dart';
+import 'package:cervejaiadaappflutter/repositories/jsonplaceholder/post_repository.dart';
 import 'package:flutter/material.dart';
 
 class PostsPage extends StatefulWidget {
